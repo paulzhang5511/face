@@ -1,0 +1,12 @@
+# cargo configuration
+#
+# Android 交叉编译推荐使用 cargo-ndk（见 scripts/build_android.sh），无需在此硬编码 linker。
+# 如需手动指定某个 target 的 linker / ar，请在本机按需填写，不要将绝对路径提交到仓库。
+#
+# 示例（请替换为你的 NDK 路径，且不要提交到仓库）:
+# [target.aarch64-linux-android]
+# linker = "aarch64-linux-android30-clang"
+# ar = "llvm-ar"
+
+[env]
+PROTOC_NO_VENDOR = "1"

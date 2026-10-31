@@ -1,0 +1,37 @@
+# Build output
+/target
+# Rendered visualization output (generated, not source)
+/output
+
+# Model weights (download via scripts/download_models.py, see models/DOWNLOAD.md)
+**/models/*.onnx
+**/models/*.tflite
+**/models/*.task
+**/models/*.binarypb
+**/models/*.jpg
+**/models/*.png
+*.tflite
+*.task
+
+# Python reference implementation (vendored, not part of the Rust crate)
+/uniface-4.1.0/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Android toolchain deps (libonnxruntime.a etc., see scripts/build_android.sh)
+/android-deps/
+
+# IDE
+.idea/
+.vscode/
+
+# Internal documentation (design docs, meeting/plan notes — kept private, not published)
+SPEC.md
+/tasks/
+/docs/DESIGN.html
+
+# OS / editor metadata
+.DS_Store

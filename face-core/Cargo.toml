@@ -1,0 +1,23 @@
+[package]
+name = "face-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description.workspace = true
+
+[dependencies]
+ort = { workspace = true }
+image = { workspace = true }
+ndarray = { workspace = true }
+num_cpus = { workspace = true }
+rayon = { workspace = true }
+log = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+[target.'cfg(target_os = "android")'.dependencies]
+android_logger = "0.14"
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+env_logger = { workspace = true }
+ort = { version = "2.0.0-rc.15", default-features = false, features = ["half", "ndarray", "load-dynamic"] }
