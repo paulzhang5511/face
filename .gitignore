@@ -35,3 +35,6 @@ SPEC.md
 
 # OS / editor metadata
 .DS_Store
+
+# WorkBuddy project data & memory (internal, not published)
+.workbuddy/
